@@ -16,6 +16,8 @@ public class HashMapConcept {
 		// it stores values in form of Key and value pair
 		// it may have 1 null key and multiple null values
 		// it maintains no order, we can get value from key
+		// can not contain duplicate key will overide the value if key is same and value is different.
+
 
 		HashMap<Integer, String> hm = new HashMap<Integer, String>();
 
@@ -23,12 +25,27 @@ public class HashMapConcept {
 		hm.put(2, "QTP");
 		hm.put(3, "TEST");
 		hm.put(4, "TestComplete");
+		hm.put(4, "NewTestComplete");
 		
+		System.out.println(hm);
+
+	/*	
 		System.out.println(hm.get(2));
 		System.out.println(hm.get(5));
 		
-		// for printing all values
+		// for printing all values Lambda
 		
+		hm.forEach((num,hmtest) -> {
+			
+			System.out.println(num + " : " + hmtest);
+		
+				
+		});
+		
+		
+		
+		
+		// for printing all values
 		for(Entry m : hm.entrySet())
 		{
 			System.out.println(m.getKey() + "   " + m.getValue());
@@ -66,5 +83,5 @@ public class HashMapConcept {
 					
 		}
 		
-	}
+*/	}
 }

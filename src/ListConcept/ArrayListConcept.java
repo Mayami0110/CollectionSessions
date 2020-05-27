@@ -1,12 +1,34 @@
 package ListConcept;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 
 public class ArrayListConcept {
 
 	public static <T> void main(String[] args) {
 	
+		
+		
+		ArrayList<Integer> num = new ArrayList<>();
+		num.add(10);
+		num.add(1);
+		num.add(100);
+		num.add(15);
+		
+		System.out.println(num.get(30));// indexoutofboundexception
+		
+		for(int i=0;i<num.size();i++)
+		{
+			System.out.println(num.get(i));
+		}
+		
+		Collections.sort(num);
+		for(int i=0;i<num.size();i++)
+		{
+			System.out.println(num.get(i));
+		}
+		
 		
 		int a[] = new int[3]; //static array -- size is fixed
 		
@@ -38,6 +60,8 @@ public class ArrayListConcept {
 		
 		//1. for loop
 		//2. iterator
+		
+		//Collections.sort(ar);
 		
 		for(int i=0;i<ar.size();i++)
 		{
@@ -127,8 +151,8 @@ public class ArrayListConcept {
 		 ar8.add("JAVA");
 		 ar8.add("JavaScript");
 		 
-		 ar7.retainAll(ar8);
-		 
+	//	 ar7.retainAll(ar8);
+		//	Collections.sort(ar7); 
 		 for (int i=0;i<ar7.size();i++)
 		 {
 			 System.out.println(ar7.get(i));

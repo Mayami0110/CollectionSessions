@@ -14,6 +14,8 @@ public class HashTableConcept {
 		// unique identifier hashcode  -- value
 		// Hashcode -- When Obj is created java provide hashcode for that obj its a 32 bit signed int number
 		// if two obj are same it will return same hashcode with equals method
+		// can not contain null key or null value
+		// can no contain duplicate elements will overide the value if key is same and value is different.
 		
 
 		Hashtable h1 = new Hashtable();
@@ -21,8 +23,33 @@ public class HashTableConcept {
 		h1.put(1, "Tom");
 		h1.put(2, "Test");
 		h1.put(3, "Peter");
+		h1.put(4, "Tom");
+		h1.put(4, "Tommy");
+
+		System.out.println(h1);
+
+		// use putall
+		Hashtable h3 = new Hashtable();
 		
-		//create a clone copy //shallow copy
+		h3.putAll(h1);
+		
+		System.out.println(h3);
+		
+		// h1.clear();
+		
+		System.out.println(h1.hashCode() + " : " + h3.hashCode());
+		
+		//Travesring in hashtable throuhg lambda
+		
+		h1.forEach((key , value) -> {
+			
+			System.out.println(key +": "+ value);
+		});
+		
+		
+		
+		
+		/*//create a clone copy //shallow copy
 		
 		Hashtable h2 = new Hashtable();
 		h2= (Hashtable) h1.clone();
@@ -85,6 +112,7 @@ public class HashTableConcept {
 		System.out.println(ht.hashCode() +"   " + ht1.hashCode());
 		
 		
-	}
+
+*/	}
 
 }
